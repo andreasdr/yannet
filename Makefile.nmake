@@ -118,27 +118,27 @@ clean:
 HTTPClientTest:
 	.\ext\windows-msc\tools\createrc.exe resources/platforms/win32/app.rc HTTPClientTest.exe $(MSCBIN)\HTTPClientTest.exe.rc
 	rc $(MSCBIN)\HTTPClientTest.exe.rc
-	cl /D YANNET_DLL_IMPORT /Fe$(MSCBIN)\HTTPClientTest /Fo$(MSCOBJMAIN)/ $(FLAGS) $(INCLUDES) src/HTTPClientTest/tools/HTTPClientTest-main.cpp $(MSCBIN)\HTTPClientTest.exe.res /link $(LD_FLAGS) $(MAIN_LDFLAGS)
+	cl /D YANNET_DLL_IMPORT /Fe$(MSCBIN)\HTTPClientTest /Fo$(MSCOBJMAIN)/ $(FLAGS) $(INCLUDES) src/yannet/tests/HTTPClientTest-main.cpp $(MSCBIN)\HTTPClientTest.exe.res /link $(LD_FLAGS) $(MAIN_LDFLAGS)
 
 HTTPDownloadClientTest:
 	.\ext\windows-msc\tools\createrc.exe resources/platforms/win32/app.rc HTTPDownloadClientTest.exe $(MSCBIN)\HTTPDownloadClientTest.exe.rc
 	rc $(MSCBIN)\HTTPDownloadClientTest.exe.rc
-	cl /D YANNET_DLL_IMPORT /Fe$(MSCBIN)\HTTPDownloadClientTest /Fo$(MSCOBJMAIN)/ $(FLAGS) $(INCLUDES) src/HTTPDownloadClientTest/tools/HTTPDownloadClientTest-main.cpp $(MSCBIN)\HTTPDownloadClientTest.exe.res /link $(LD_FLAGS) $(MAIN_LDFLAGS)
+	cl /D YANNET_DLL_IMPORT /Fe$(MSCBIN)\HTTPDownloadClientTest /Fo$(MSCOBJMAIN)/ $(FLAGS) $(INCLUDES) src/yannet/tests/HTTPDownloadClientTest-main.cpp $(MSCBIN)\HTTPDownloadClientTest.exe.res /link $(LD_FLAGS) $(MAIN_LDFLAGS)
 
 ThreadingTest:
 	.\ext\windows-msc\tools\createrc.exe resources/platforms/win32/app.rc ThreadingTest.exe $(MSCBIN)\ThreadingTest.exe.rc
 	rc $(MSCBIN)\ThreadingTest.exe.rc
-	cl /D YANNET_DLL_IMPORT /Fe$(MSCBIN)\ThreadingTest /Fo$(MSCOBJMAIN)/ $(FLAGS) $(INCLUDES) src/ThreadingTest/tools/ThreadingTest-main.cpp $(MSCBIN)\ThreadingTest.exe.res /link $(LD_FLAGS) $(MAIN_LDFLAGS)
+	cl /D YANNET_DLL_IMPORT /Fe$(MSCBIN)\ThreadingTest /Fo$(MSCOBJMAIN)/ $(FLAGS) $(INCLUDES) src/yannet/tests/ThreadingTest-main.cpp $(MSCBIN)\ThreadingTest.exe.res /link $(LD_FLAGS) $(MAIN_LDFLAGS)
 
 UDPClientTest:
 	.\ext\windows-msc\tools\createrc.exe resources/platforms/win32/app.rc UDPClientTest.exe $(MSCBIN)\UDPClientTest.exe.rc
 	rc $(MSCBIN)\UDPClientTest.exe.rc
-	cl /D YANNET_DLL_IMPORT /Fe$(MSCBIN)\UDPClientTest /Fo$(MSCOBJMAIN)/ $(FLAGS) $(INCLUDES) src/UDPClientTest/tools/UDPClientTest-main.cpp $(MSCBIN)\UDPClientTest.exe.res /link $(LD_FLAGS) $(MAIN_LDFLAGS)
+	cl /D YANNET_DLL_IMPORT /Fe$(MSCBIN)\UDPClientTest /Fo$(MSCOBJMAIN)/ $(FLAGS) $(INCLUDES) src/yannet/tests/UDPClientTest-main.cpp $(MSCBIN)\UDPClientTest.exe.res /link $(LD_FLAGS) $(MAIN_LDFLAGS)
 
 UDPServerTest:
 	.\ext\windows-msc\tools\createrc.exe resources/platforms/win32/app.rc UDPServerTest.exe $(MSCBIN)\UDPServerTest.exe.rc
 	rc $(MSCBIN)\UDPServerTest.exe.rc
-	cl /D YANNET_DLL_IMPORT /Fe$(MSCBIN)\UDPServerTest /Fo$(MSCOBJMAIN)/ $(FLAGS) $(INCLUDES) src/UDPServerTest/tools/UDPServerTest-main.cpp $(MSCBIN)\UDPServerTest.exe.res /link $(LD_FLAGS) $(MAIN_LDFLAGS)
+	cl /D YANNET_DLL_IMPORT /Fe$(MSCBIN)\UDPServerTest /Fo$(MSCOBJMAIN)/ $(FLAGS) $(INCLUDES) src/yannet/tests/UDPServerTest-main.cpp $(MSCBIN)\UDPServerTest.exe.res /link $(LD_FLAGS) $(MAIN_LDFLAGS)
 
 copy-executables:
 	if exist bin\yannet\tests del /S /Q bin\yannet\tests >nul 2>&1
