@@ -6,8 +6,7 @@
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/15611/badge.svg)](https://scan.coverity.com/projects/andreasdr-yannet)  
   
 # 1. What is Yannet?
-- Yannet means "Yet another new net work component"
-- Yannet is a lightweight, multiplatform network code that includes a HTTP/S client, a HTTP/S download client and a UDP Server and client. 
+- Yannet is a lightweight, multiplatform network code that includes a HTTP/S client, a HTTP/S download client and a UDP Server and UDP client 
 - Yannet is open source
   - please check the [license](https://github.com/andreasdr/yannet/blob/master/LICENSE)
   - you find the source code at [https://github.com/andreasdr/yannet](https://github.com/andreasdr/yannet) 
