@@ -8,7 +8,7 @@
 # 1. What is Yannet?
 Yannet is developed as part of our TDME2 3D Engine to match the requirements for performant network client and server functionality in video games.
 
-## 1.1 Open source
+## 1.1. Open source
 - Yannet is open source
   - please check the [license](https://github.com/andreasdr/yannet/blob/master/LICENSE)
   - you find the source code at [https://github.com/andreasdr/yannet](https://github.com/andreasdr/yannet) 
