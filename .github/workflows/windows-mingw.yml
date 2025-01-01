@@ -1,0 +1,28 @@
+name: CI Windows/MINGW
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+defaults:
+    run:
+      shell: msys2 {0}
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: msys2/setup-msys2@v2
+      with:
+        update: true
+        install: >-
+          base-devel
+          git
+          make
+    - uses: actions/checkout@v2
+    - name: make mains
+      run: make mains
