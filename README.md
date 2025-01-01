@@ -4,8 +4,12 @@
 [![Windows/MINGW Build Status](https://github.com/andreasdr/yannet/actions/workflows/windows-mingw.yml/badge.svg)](https://github.com/andreasdr/yannet/actions)
 [![Windows/MSC Build Status](https://github.com/andreasdr/yannet/actions/workflows/windows-msc.yml/badge.svg)](https://github.com/andreasdr/yannet/actions)
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/15611/badge.svg)](https://scan.coverity.com/projects/andreasdr-yannet)  
-  
-# 1. What is Yannet?
+
+This is the home of Yannet - Yet another new net work C++ component.
+
+This document and repository is WIP. Expect a BETA release around 2025-03-01.
+
+# 1. Introduction
 Yannet is developed as part of our TDME2 3D Engine to match the requirements for performant network client and server functionality in video games.
 
 ## 1.1. Open source
