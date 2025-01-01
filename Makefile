@@ -73,18 +73,17 @@ else ifeq ($(OS), Haiku)
 	OFLAGS := -O3
 else ifeq ($(OS), Linux)
 	# Linux
+	SRCS_PLATFORM := $(SRCS_PLATFORM) \
+		src/yannet/os/network/platform/linux/KernelEventMechanism.cpp
 	INCLUDES := $(INCLUDES)
 	LIBS_LDFLAGS := -L/usr/lib64 -lssl -lcrypto
 	OFLAGS := -O3
-	SRCS_PLATFORM := $(SRCS_PLATFORM) \
-		src/yannet/os/network/platform/linux/KernelEventMechanism.cpp
-else
+else ifeq ($(OSSHORT), Msys)
 	# Windows
 	SRCS_PLATFORM:= $(SRCS_PLATFORM) \
 		src/yannet/os/network/platform/fallback/KernelEventMechanism.cpp
-	EXTRAFLAGS := $(EXTRAFLAGS)
 	INCLUDES := $(INCLUDES) -I/mingw64/include
-	LIBS_LDFLAGS := -L/mingw64/lib -lws2_32 -ldbghelp
+	LIBS_LDFLAGS = -L/mingw64/lib -lws2_32 -lssl -lcrypto
 	OFLAGS := -O3
 endif
 
