@@ -5,8 +5,6 @@
 [![Windows/MSC Build Status](https://github.com/andreasdr/yannet/actions/workflows/windows-msc.yml/badge.svg)](https://github.com/andreasdr/yannet/actions)
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/15611/badge.svg)](https://scan.coverity.com/projects/andreasdr-yannet)  
   
-![LOGO](https://raw.githubusercontent.com/andreasdr/yannet/master/resources/github/tdme2-logo.png)
-
 # 1. What is Yannet?
 - Yannet means "Yet another new net work component"
 - Yannet is a lightweight, multiplatform network code that includes a HTTP/S client, a HTTP/S download client and a UDP Server and client. 
