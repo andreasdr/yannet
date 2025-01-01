@@ -11,7 +11,7 @@ This document and repository is WIP. Expect a BETA release around 2025-03-01.
 See section 3. for BETA release TODO list.
 
 # 1. Introduction
-Yannet is developed as part of our TDME2 3D Engine to match the requirements for performant network client and server functionality in video games.
+Yannet is developed as part of our [TDME2 3D Engine](https://github.com/andreasdr/tdme2) to match the requirements for performant network client and server functionality in video games.
 
 ## 1.1. Open source
 - Yannet is open source
