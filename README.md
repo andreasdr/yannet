@@ -39,7 +39,7 @@ Yannet is developed as part of our TDME2 3D Engine to match the requirements for
 - ...
 
 # 4. Technology
-- designed for simple multi threading, but
+- Multi threading
     - UDP client has its own thread
     - UDP server can have multiple IO threads, multiple worker threads and always has its own server thread
     - HTTP download client has its own thread
