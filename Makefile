@@ -81,12 +81,9 @@ else ifeq ($(OS), Linux)
 else
 	# Windows
 	SRCS_PLATFORM:= $(SRCS_PLATFORM) \
-		src/yannet/os/network/platform/fallback/KernelEventMechanism.cpp \
-		src/yannet/engine/fileio/models/ModelReader.cpp
-	# TODO: No console flags: -Wl,-subsystem,windows
+		src/yannet/os/network/platform/fallback/KernelEventMechanism.cpp
 	EXTRAFLAGS := $(EXTRAFLAGS)
-	#-D_GLIBCXX_DEBUG
-	INCLUDES := $(INCLUDES) -I/mingw64/include -I/mingw64/include/freetype2
+	INCLUDES := $(INCLUDES) -I/mingw64/include
 	LIBS_LDFLAGS := -L/mingw64/lib -lws2_32 -ldbghelp
 	OFLAGS := -O3
 endif
