@@ -52,7 +52,7 @@ Yannet is developed as part of our TDME2 3D Engine to match the requirements for
     - HTTP download client has its own thread
 - uses 3rd party libraries
     - needs to be installed, if not using port-msc
-        - OpenSSH
+        - OpenSSL
 - targeted platforms and its current state
     - Windows/MINGW(port completed)
     - Windows/MSC(port completed)
