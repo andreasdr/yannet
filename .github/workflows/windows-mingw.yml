@@ -23,6 +23,8 @@ jobs:
           base-devel
           git
           make
+          mingw-w64-x86_64-gcc
+          mingw-w64-x86_64-openssl
     - uses: actions/checkout@v2
     - name: make mains
       run: make mains
