@@ -5,7 +5,8 @@ SRCS_PLATFORM = \
 	src/yannet/os/network/platform/fallback/KernelEventMechanism.cpp
 
 INCLUDES = \
-	/I "src"
+	/I "src" \
+	/I "ext\windows-msc\openssl\include"
 
 # For some reason this works only once LOL
 # WINDOWS_SDK_DIR = %WindowsSdkDir%Lib\%WindowsSDKLibVersion%
