@@ -1,8 +1,7 @@
 #pragma once
 
-#include <yannet/os/threading/fwd-yannet.h>
-
 #include <yannet/yannet.h>
+#include <yannet/os/threading/fwd-yannet.h>
 
 #include <atomic>
 #include <string>

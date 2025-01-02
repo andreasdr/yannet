@@ -18,13 +18,13 @@ using std::to_string;
 using std::unordered_map;
 using std::unordered_set;
 
-using yannet::os::threading::ReadWriteLock;
-using yannet::utilities::Exception;
-using yannet::utilities::Reference;
-
 namespace yannet {
 namespace network {
 namespace udpserver {
+
+using yannet::os::threading::ReadWriteLock;
+using yannet::utilities::Exception;
+using yannet::utilities::Reference;
 
 /**
  * Base class for network server groups

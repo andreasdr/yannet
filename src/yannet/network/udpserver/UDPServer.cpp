@@ -9,6 +9,7 @@
 #include <yannet/yannet.h>
 #include <yannet/math/Math.h>
 #include <yannet/network/udp/UDPPacket.h>
+#include <yannet/network/udpserver/UDPServerClient.h>
 #include <yannet/network/udpserver/UDPServerIOThread.h>
 #include <yannet/os/threading/AtomicOperations.h>
 #include <yannet/os/threading/Barrier.h>
@@ -29,6 +30,7 @@ using std::unique_ptr;
 using yannet::math::Math;
 using yannet::network::udp::UDPPacket;
 using yannet::network::udpserver::UDPServer;
+using yannet::network::udpserver::UDPServerClient;
 using yannet::network::udpserver::UDPServerIOThread;
 using yannet::os::threading::AtomicOperations;
 using yannet::os::threading::Barrier;

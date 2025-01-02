@@ -4,13 +4,19 @@
 #include <yannet/os/threading/AtomicOperations.h>
 #include <yannet/utilities/fwd-yannet.h>
 
-using yannet::os::threading::AtomicOperations;
+// namespaces
+namespace yannet {
+namespace utilities {
+	using yannet::os::threading::AtomicOperations;
+}
+}
 
 /**
  * Reference counter implementation to be used with inheritance
  * @author Andreas Drewke
  */
 class yannet::utilities::Reference {
+
 public:
 	// forbid class copy
 	FORBID_CLASS_COPY(Reference)

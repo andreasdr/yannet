@@ -12,8 +12,13 @@ using std::string;
 using std::to_string;
 using std::vector;
 
-using yannet::math::Math;
-using yannet::utilities::Console;
+// namespaces
+namespace yannet {
+namespace utilities {
+	using yannet::math::Math;
+	using yannet::utilities::Console;
+}
+}
 
 /**
  * UTF8 string character iterator

@@ -15,12 +15,12 @@ using std::unique_ptr;
 using std::unordered_map;
 using std::unordered_set;
 
-using yannet::os::threading::Barrier;
-using yannet::os::threading::ReadWriteLock;
-
 namespace yannet {
 namespace network {
 namespace udpserver {
+
+using yannet::os::threading::Barrier;
+using yannet::os::threading::ReadWriteLock;
 
 class ServerWorkerThreadPool;
 

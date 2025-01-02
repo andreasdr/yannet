@@ -25,14 +25,21 @@ using std::queue;
 using std::string;
 using std::unordered_map;
 
-using yannet::os::network::KernelEventMechanism;
-using yannet::os::network::UDPSocket;
-using yannet::os::threading::Mutex;
-using yannet::os::threading::Thread;
+// namespaces
+namespace yannet {
+namespace network {
+namespace udpclient {
+	using yannet::os::network::KernelEventMechanism;
+	using yannet::os::network::UDPSocket;
+	using yannet::os::threading::Mutex;
+	using yannet::os::threading::Thread;
 
-using yannet::network::udp::UDPPacket;
-using yannet::network::udpclient::NetworkClientException;
-using yannet::network::udpclient::UDPClientMessage;
+	using yannet::network::udp::UDPPacket;
+	using yannet::network::udpclient::NetworkClientException;
+	using yannet::network::udpclient::UDPClientMessage;
+}
+}
+}
 
 /**
  * UDP client

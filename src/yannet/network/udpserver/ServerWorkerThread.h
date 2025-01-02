@@ -7,12 +7,12 @@
 #include <yannet/os/threading/Barrier.h>
 #include <yannet/os/threading/Thread.h>
 
-using yannet::os::threading::Barrier;
-using yannet::os::threading::Thread;
-
 namespace yannet {
 namespace network {
 namespace udpserver {
+
+using yannet::os::threading::Barrier;
+using yannet::os::threading::Thread;
 
 class ServerWorkerThreadPool;
 

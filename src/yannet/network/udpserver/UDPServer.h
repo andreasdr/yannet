@@ -24,16 +24,23 @@ using std::unique_ptr;
 using std::unordered_map;
 using std::unordered_set;
 
-using yannet::network::udp::UDPPacket;
-using yannet::network::udpserver::NetworkServerException;
-using yannet::network::udpserver::Server;
-using yannet::network::udpserver::ServerWorkerThreadPool;
-using yannet::network::udpserver::UDPServerClient;
-using yannet::network::udpserver::UDPServerGroup;
-using yannet::network::udpserver::UDPServerIOThread;
-using yannet::os::threading::Barrier;
-using yannet::os::threading::ReadWriteLock;
-using yannet::os::threading::Thread;
+// namespaces
+namespace yannet {
+namespace network {
+namespace udpserver {
+	using yannet::network::udp::UDPPacket;
+	using yannet::network::udpserver::NetworkServerException;
+	using yannet::network::udpserver::Server;
+	using yannet::network::udpserver::ServerWorkerThreadPool;
+	using yannet::network::udpserver::UDPServerClient;
+	using yannet::network::udpserver::UDPServerGroup;
+	using yannet::network::udpserver::UDPServerIOThread;
+	using yannet::os::threading::Barrier;
+	using yannet::os::threading::ReadWriteLock;
+	using yannet::os::threading::Thread;
+}
+}
+}
 
 /**
  * Base class for network UDP servers

@@ -12,7 +12,14 @@ using std::array;
 using std::string;
 using std::to_string;
 
-using yannet::utilities::Console;
+// namespaces
+namespace yannet {
+namespace network {
+namespace udp {
+	using yannet::utilities::Console;
+}
+}
+}
 
 /**
  * UDP Packet

@@ -11,8 +11,15 @@
 using std::string;
 using std::unique_ptr;
 
-using yannet::network::udp::UDPPacket;
-using yannet::utilities::Time;
+// namespaces
+namespace yannet {
+namespace network {
+namespace udpclient {
+	using yannet::network::udp::UDPPacket;
+	using yannet::utilities::Time;
+}
+}
+}
 
 /**
  * UDP client message

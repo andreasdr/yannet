@@ -18,17 +18,23 @@ using std::unique_ptr;
 using std::unordered_map;
 using std::vector;
 
-using yannet::network::httpclient::HTTPClientException;
-using yannet::os::network::NetworkException;
-using yannet::os::threading::Mutex;
-using yannet::os::threading::Thread;
+// namespaces
+namespace yannet {
+namespace network {
+namespace httpclient {
+	using yannet::network::httpclient::HTTPClientException;
+	using yannet::os::network::NetworkException;
+	using yannet::os::threading::Mutex;
+	using yannet::os::threading::Thread;
+}
+}
+}
 
 /**
  * HTTP download client
  * @author Andreas Drewke
  */
 class yannet::network::httpclient::HTTPDownloadClient {
-
 private:
 	string url;
 	string file;

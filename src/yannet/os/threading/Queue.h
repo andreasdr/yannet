@@ -1,22 +1,20 @@
 #pragma once
 
-#include <yannet/os/threading/fwd-yannet.h>
-
 #include <yannet/yannet.h>
-
-#include <queue>
-
+#include <yannet/os/threading/fwd-yannet.h>
 #include <yannet/os/threading/Condition.h>
 #include <yannet/os/threading/Mutex.h>
 
-using std::queue;
+#include <queue>
 
-using yannet::os::threading::Condition;
-using yannet::os::threading::Mutex;
+using std::queue;
 
 namespace yannet {
 namespace os {
 namespace threading {
+
+using yannet::os::threading::Condition;
+using yannet::os::threading::Mutex;
 
 /**
  * Consumer/producer queue.

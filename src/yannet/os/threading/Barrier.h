@@ -1,18 +1,23 @@
 #pragma once
 
-#include <yannet/os/threading/fwd-yannet.h>
-
-#include <yannet/yannet.h>
-
 #include <string>
 
+#include <yannet/yannet.h>
+#include <yannet/os/threading/fwd-yannet.h>
 #include <yannet/os/threading/Condition.h>
 #include <yannet/os/threading/Mutex.h>
 
 using std::string;
 
-using yannet::os::threading::Condition;
-using yannet::os::threading::Mutex;
+// namespaces
+namespace yannet {
+namespace os {
+namespace threading {
+	using yannet::os::threading::Condition;
+	using yannet::os::threading::Mutex;
+}
+}
+}
 
 /**
  * Barrier implementation.

@@ -16,10 +16,21 @@
 
 #include <yannet/os/threading/Mutex.h>
 
-using yannet::os::threading::Mutex;
-
 using std::array;
 using std::vector;
+
+// namespaces
+namespace yannet {
+namespace os {
+namespace network {
+namespace platform {
+namespace bsd {
+	using yannet::os::threading::Mutex;
+}
+}
+}
+}
+}
 
 /**
  * BSD kernel event mechanism platform specific data

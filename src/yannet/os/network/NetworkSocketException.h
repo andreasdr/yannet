@@ -5,13 +5,11 @@
 #include <yannet/yannet.h>
 #include <yannet/os/network/NetworkException.h>
 
-using yannet::os::network::NetworkException;
-
 /**
  * Socket exception class
  * @author Andreas Drewke
  */
-class yannet::os::network::NetworkSocketException: public NetworkException {
+class yannet::os::network::NetworkSocketException: public yannet::os::network::NetworkException {
 public:
 	/**
 	 * Constructor

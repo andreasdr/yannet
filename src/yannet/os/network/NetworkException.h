@@ -7,13 +7,11 @@
 #include <yannet/utilities/fwd-yannet.h>
 #include <yannet/utilities/ExceptionBase.h>
 
-using yannet::utilities::ExceptionBase;
-
 /**
  * Base exception class for network exceptions
  * @author Andreas Drewke
  */
-class yannet::os::network::NetworkException: public ExceptionBase {
+class yannet::os::network::NetworkException: public yannet::utilities::ExceptionBase {
 public:
 	/**
 	 * Constructor

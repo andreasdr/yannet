@@ -12,12 +12,12 @@
 using std::vector;
 using std::unique_ptr;
 
-using yannet::os::threading::Barrier;
-using yannet::os::threading::Queue;
-
 namespace yannet {
 namespace network {
 namespace udpserver {
+
+using yannet::os::threading::Barrier;
+using yannet::os::threading::Queue;
 
 class ServerRequest;
 

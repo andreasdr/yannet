@@ -6,15 +6,17 @@
 #include <yannet/network/udpserver/UDPServer.h>
 #include <yannet/network/udpserver/UDPServerClient.h>
 
-using yannet::network::udpserver::ServerGroup;
-using yannet::network::udpserver::UDPServer;
-using yannet::network::udpserver::UDPServerClient;
-
 /**
  * UDP server group class
  * @author Andreas Drewke
  */
-class yannet::network::udpserver::UDPServerGroup : public ServerGroup<UDPServer, UDPServerClient, UDPServerGroup> {
+class yannet::network::udpserver::UDPServerGroup :
+	public
+		ServerGroup<
+			yannet::network::udpserver::UDPServer,
+			yannet::network::udpserver::UDPServerClient,
+			yannet::network::udpserver::UDPServerGroup
+		> {
 public:
 	/**
 	 * @brief Creates a frame to be used with send

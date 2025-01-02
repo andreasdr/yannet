@@ -1,8 +1,7 @@
 #pragma once
 
-#include <yannet/os/threading/fwd-yannet.h>
-
 #include <yannet/yannet.h>
+#include <yannet/os/threading/fwd-yannet.h>
 
 #include <condition_variable>
 #include <mutex>
@@ -14,7 +13,14 @@ using std::condition_variable_any;
 using std::mutex;
 using std::string;
 
-using yannet::os::threading::Mutex;
+// namespaces
+namespace yannet {
+namespace os {
+namespace threading {
+	using yannet::os::threading::Mutex;
+}
+}
+}
 
 /**
 * Threading condition variable implementation

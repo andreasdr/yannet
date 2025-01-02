@@ -8,19 +8,19 @@
 
 using std::string;
 
-using yannet::utilities::Exception;
-using yannet::utilities::Reference;
-
 namespace yannet {
 namespace network {
 namespace udpserver {
+
+using yannet::utilities::Exception;
+using yannet::utilities::Reference;
 
 /**
  * Base class for network server group
  * @author Andreas Drewke
  */
-class ServerGroupBase : public Reference {
-friend class ServerWorkerThread;
+class ServerGroupBase : public yannet::utilities::Reference {
+	friend class ServerWorkerThread;
 
 protected:
 	/*

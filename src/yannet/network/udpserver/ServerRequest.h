@@ -9,11 +9,11 @@
 
 using std::string;
 
-using yannet::network::udp::UDPPacket;
-
 namespace yannet {
 namespace network {
 namespace udpserver {
+
+using yannet::network::udp::UDPPacket;
 
 class ServerClient;
 
@@ -22,7 +22,6 @@ class ServerClient;
  * @author Andreas Drewke
  */
 class ServerRequest final {
-
 public:
 	enum RequestType {
 		REQUESTTYPE_CLIENT_REQUEST,

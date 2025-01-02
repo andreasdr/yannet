@@ -8,15 +8,13 @@
 #include <yannet/os/network/fwd-yannet.h>
 #include <yannet/os/network/NetworkException.h>
 
-using yannet::os::network::NetworkException;
-
 using std::string;
 
 /**
  * Base exception class for network client exceptions
  * @author Andreas Drewke
  */
-class yannet::network::udpclient::NetworkClientException: public NetworkException {
+class yannet::network::udpclient::NetworkClientException: public yannet::os::network::NetworkException {
 public:
 	/**
 	 * @brief public constructor

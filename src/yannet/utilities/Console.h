@@ -16,9 +16,13 @@ using std::string_view;
 using std::unique_ptr;
 using std::vector;
 
-using yannet::os::threading::Mutex;
-using yannet::os::threading::Thread;
-
+// namespaces
+namespace yannet {
+namespace utilities {
+	using yannet::os::threading::Mutex;
+	using yannet::os::threading::Thread;
+}
+}
 
 /**
  * Console class
@@ -28,7 +32,6 @@ using yannet::os::threading::Thread;
 class yannet::utilities::Console
 {
 public:
-
 	static constexpr int HISTORY_LINECOUNT { 5000 };
 
 	struct Logger

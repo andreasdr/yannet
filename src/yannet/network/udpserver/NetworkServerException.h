@@ -8,13 +8,11 @@
 #include <yannet/os/network/fwd-yannet.h>
 #include <yannet/os/network/NetworkException.h>
 
-using yannet::os::network::NetworkException;
-
 /**
  * Base exception class for network server exceptions
  * @author Andreas Drewke
  */
-class yannet::network::udpserver::NetworkServerException: public NetworkException {
+class yannet::network::udpserver::NetworkServerException: public yannet::os::network::NetworkException {
 public:
 	/**
 	 * @brief public constructor

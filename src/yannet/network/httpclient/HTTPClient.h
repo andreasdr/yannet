@@ -14,15 +14,21 @@ using std::stringstream;
 using std::unordered_map;
 using std::vector;
 
-using yannet::network::httpclient::HTTPClientException;
-using yannet::os::network::NetworkException;
+// namespaces
+namespace yannet {
+namespace network {
+namespace httpclient {
+	using yannet::network::httpclient::HTTPClientException;
+	using yannet::os::network::NetworkException;
+}
+}
+}
 
 /**
  * Basic HTTP client
  * @author Andreas Drewke
  */
 class yannet::network::httpclient::HTTPClient {
-
 private:
 	string url;
 	string method;

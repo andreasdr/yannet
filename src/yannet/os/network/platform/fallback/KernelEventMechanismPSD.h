@@ -19,7 +19,18 @@
 using std::unordered_map;
 using std::vector;
 
-using yannet::os::threading::Mutex;
+// namespaces
+namespace yannet {
+namespace os {
+namespace network {
+namespace platform {
+namespace fallback {
+	using yannet::os::threading::Mutex;
+}
+}
+}
+}
+}
 
 /**
  * Fallback/select kernel event mechanism platform specific data

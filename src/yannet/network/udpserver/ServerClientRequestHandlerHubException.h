@@ -5,8 +5,6 @@
 #include <yannet/yannet.h>
 #include <yannet/utilities/ExceptionBase.h>
 
-using yannet::utilities::ExceptionBase;
-
 using std::string;
 
 namespace yannet {
@@ -17,7 +15,7 @@ namespace udpserver {
  * Network server client request handler hub exception
  * @author Andreas Drewke
  */
-class ServerClientRequestHandlerHubException: public ExceptionBase {
+class ServerClientRequestHandlerHubException: public yannet::utilities::ExceptionBase {
 public:
 	/**
 	 * @brief public constructor
