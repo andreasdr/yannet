@@ -4,9 +4,16 @@
 [![Windows/MINGW Build Status](https://github.com/andreasdr/yannet/actions/workflows/windows-mingw.yml/badge.svg)](https://github.com/andreasdr/yannet/actions)
 [![Windows/MSC Build Status](https://github.com/andreasdr/yannet/actions/workflows/windows-msc.yml/badge.svg)](https://github.com/andreasdr/yannet/actions)
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/15611/badge.svg)](https://scan.coverity.com/projects/andreasdr-yannet)  
-  
-# 1. What is Yannet?
-- Yannet is a lightweight, multiplatform network code that includes a HTTP/S client, a HTTP/S download client and a UDP Server and UDP client 
+
+This is the home of Yannet - Yet another new net work C++ component.
+
+This document and repository is WIP. Expect a BETA release around 2025-03-01.
+See section 3. for BETA release TODO list.
+
+# 1. Introduction
+Yannet is developed as part of our [TDME2 3D Engine](https://github.com/andreasdr/tdme2) to match the requirements for performant network client and server functionality in video games.
+
+## 1.1. Open source
 - Yannet is open source
   - please check the [license](https://github.com/andreasdr/yannet/blob/master/LICENSE)
   - you find the source code at [https://github.com/andreasdr/yannet](https://github.com/andreasdr/yannet) 
@@ -33,17 +40,19 @@
     - uses a separate thread to download to file
     - IPV6 ready
 
-# 3. What does it (maybe still) lack
-- ...
+# 3. BETA TODO
+- clean up
+- make it integrable into TDME2
+- add a TCP server and client
 
 # 4. Technology
-- designed for simple multi threading, but
+- Multi threading
     - UDP client has its own thread
     - UDP server can have multiple IO threads, multiple worker threads and always has its own server thread
     - HTTP download client has its own thread
 - uses 3rd party libraries
     - needs to be installed, if not using port-msc
-        - OpenSSH
+        - OpenSSL
 - targeted platforms and its current state
     - Windows/MINGW(port completed)
     - Windows/MSC(port completed)
