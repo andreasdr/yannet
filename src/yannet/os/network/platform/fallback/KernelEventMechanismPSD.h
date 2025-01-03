@@ -25,7 +25,7 @@ namespace os {
 namespace network {
 namespace platform {
 namespace fallback {
-	using yannet::os::threading::Mutex;
+	using ::yannet::os::threading::Mutex;
 }
 }
 }

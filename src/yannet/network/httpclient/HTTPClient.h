@@ -18,8 +18,8 @@ using std::vector;
 namespace yannet {
 namespace network {
 namespace httpclient {
-	using yannet::network::httpclient::HTTPClientException;
-	using yannet::os::network::NetworkException;
+	using ::yannet::network::httpclient::HTTPClientException;
+	using ::yannet::os::network::NetworkException;
 }
 }
 }

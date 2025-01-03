@@ -17,7 +17,7 @@ using std::string;
 namespace yannet {
 namespace os {
 namespace threading {
-	using yannet::os::threading::Mutex;
+	using ::yannet::os::threading::Mutex;
 }
 }
 }

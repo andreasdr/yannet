@@ -15,8 +15,8 @@ using std::unique_ptr;
 namespace yannet {
 namespace network {
 namespace udpclient {
-	using yannet::network::udp::UDPPacket;
-	using yannet::utilities::Time;
+	using ::yannet::network::udp::UDPPacket;
+	using ::yannet::utilities::Time;
 }
 }
 }

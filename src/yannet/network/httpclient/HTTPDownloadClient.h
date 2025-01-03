@@ -22,10 +22,10 @@ using std::vector;
 namespace yannet {
 namespace network {
 namespace httpclient {
-	using yannet::network::httpclient::HTTPClientException;
-	using yannet::os::network::NetworkException;
-	using yannet::os::threading::Mutex;
-	using yannet::os::threading::Thread;
+	using ::yannet::network::httpclient::HTTPClientException;
+	using ::yannet::os::network::NetworkException;
+	using ::yannet::os::threading::Mutex;
+	using ::yannet::os::threading::Thread;
 }
 }
 }

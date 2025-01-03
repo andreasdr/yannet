@@ -19,8 +19,8 @@ using std::vector;
 // namespaces
 namespace yannet {
 namespace utilities {
-	using yannet::os::threading::Mutex;
-	using yannet::os::threading::Thread;
+	using ::yannet::os::threading::Mutex;
+	using ::yannet::os::threading::Thread;
 }
 }
 

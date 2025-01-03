@@ -16,7 +16,7 @@ using std::to_string;
 namespace yannet {
 namespace network {
 namespace udp {
-	using yannet::utilities::Console;
+	using ::yannet::utilities::Console;
 }
 }
 }

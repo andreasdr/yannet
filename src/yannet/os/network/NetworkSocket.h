@@ -12,7 +12,7 @@ using std::string;
 namespace yannet {
 namespace os {
 namespace network {
-	using yannet::os::network::NetworkSocketException;
+	using ::yannet::os::network::NetworkSocketException;
 }
 }
 }
