@@ -54,7 +54,7 @@ else ifeq ($(OS), NetBSD)
 	SRCS_PLATFORM := $(SRCS_PLATFORM) \
 		src/yannet/os/network/platform/bsd/KernelEventMechanism.cpp
 	INCLUDES := $(INCLUDES) -I/usr/pkg/include
-	LIBS_LDFLAGS := -Wl,-rpath /usr/pkg/lib -L/usr/X11R7/lib -L/usr/pkg/lib -lssl -lcrypto
+	LIBS_LDFLAGS := -Wl,-rpath /usr/pkg/lib -L/usr/X11R7/lib -L/usr/pkg/lib -lexecinfo -lssl -lcrypto
 else ifeq ($(OS), OpenBSD)
 	# OpenBSD
 	SRCS_PLATFORM := $(SRCS_PLATFORM) \
