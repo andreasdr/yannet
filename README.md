@@ -5,6 +5,8 @@
 [![Windows/MSC Build Status](https://github.com/andreasdr/yannet/actions/workflows/windows-msc.yml/badge.svg)](https://github.com/andreasdr/yannet/actions)
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/15611/badge.svg)](https://scan.coverity.com/projects/andreasdr-yannet)  
 
+![LOGO](https://raw.githubusercontent.com/andreasdr/yannet/main/resources/github/yannet-logo.png)
+
 This is the home of Yannet - Yet another new net work C++ component.
 
 This document and repository is WIP. Expect a BETA release around 2025-03-01.
