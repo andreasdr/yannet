@@ -28,7 +28,7 @@ SRCS_PLATFORM =
 
 #
 CPPVERSION = -std=c++2a
-OFLAGS =
+OFLAGS := -O3
 EXTRAFLAGS =
 INCLUDES = -Isrc
 
@@ -42,49 +42,42 @@ ifeq ($(OS), Darwin)
 	SRCS_PLATFORM := $(SRCS_PLATFORM) \
 		src/yannet/os/network/platform/bsd/KernelEventMechanism.cpp
 	LIBS_LDFLAGS := -framework Cocoa -framework IOKit -framework Carbon -lssl -lcrypto
-	OFLAGS := -O3
 else ifeq ($(OS), FreeBSD)
 	# FreeBSD
 	SRCS_PLATFORM := $(SRCS_PLATFORM) \
 		src/yannet/os/network/platform/bsd/KernelEventMechanism.cpp
 	INCLUDES := $(INCLUDES) -I/usr/local/include
 	LIBS_LDFLAGS := -L/usr/local/lib -lssl -lcrypto
-	OFLAGS := -O3
 else ifeq ($(OS), NetBSD)
 	# NetBSD
 	SRCS_PLATFORM := $(SRCS_PLATFORM) \
 		src/yannet/os/network/platform/bsd/KernelEventMechanism.cpp
 	INCLUDES := $(INCLUDES) -I/usr/pkg/include
-	LIBS_LDFLAGS := -L/usr/X11R7/lib -L/usr/pkg/lib -lssl -lcrypto
-	OFLAGS := -O3
+	LIBS_LDFLAGS := -Wl,-rpath /usr/pkg/lib -L/usr/X11R7/lib -L/usr/pkg/lib -lssl -lcrypto
 else ifeq ($(OS), OpenBSD)
 	# OpenBSD
 	SRCS_PLATFORM := $(SRCS_PLATFORM) \
 		src/yannet/os/network/platform/bsd/KernelEventMechanism.cpp
 	INCLUDES := $(INCLUDES) -I/usr/local/include
 	LIBS_LDFLAGS := -L/usr/local/lib -lm -lstdc++ -lssl -lcrypto
-	OFLAGS := -O3
 else ifeq ($(OS), Haiku)
 	# Haiku
 	SRCS_PLATFORM := $(SRCS_PLATFORM) \
 		src/yannet/os/network/platform/bsd/KernelEventMechanism.cpp
 	INCLUDES := $(INCLUDES) -I/boot/system/develop/headers
 	LIBS_LDFLAGS := -lnetwork -lssl -lcrypto
-	OFLAGS := -O3
 else ifeq ($(OS), Linux)
 	# Linux
 	SRCS_PLATFORM := $(SRCS_PLATFORM) \
 		src/yannet/os/network/platform/linux/KernelEventMechanism.cpp
 	INCLUDES := $(INCLUDES)
 	LIBS_LDFLAGS := -L/usr/lib64 -lssl -lcrypto
-	OFLAGS := -O3
 else ifeq ($(OSSHORT), Msys)
 	# Windows
 	SRCS_PLATFORM:= $(SRCS_PLATFORM) \
 		src/yannet/os/network/platform/fallback/KernelEventMechanism.cpp
 	INCLUDES := $(INCLUDES) -I/mingw64/include
 	LIBS_LDFLAGS = -L/mingw64/lib -lws2_32 -lssl -lcrypto
-	OFLAGS := -O3
 endif
 
 CPPFLAGS := $(INCLUDES)
