@@ -7,7 +7,7 @@
 
 ![LOGO](https://raw.githubusercontent.com/andreasdr/yannet/main/resources/github/yannet-logo.png)
 
-This is the home of Yannet - Yet another new net work C++ component.
+This is the home of Yannet - C++ network library for games
 
 This document and repository is WIP. Expect a BETA release around 2025-03-01.
 See section 3. for BETA release TODO list.
