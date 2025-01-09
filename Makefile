@@ -21,7 +21,6 @@ endif
 LIB := lib$(NAME)$(LIB_EXT)
 LIBS_LDFLAGS =
 MAIN_LDFLAGS =
-LDFLAG_LIB := $(NAME)
 
 #
 SRCS_PLATFORM =
@@ -48,6 +47,7 @@ else ifeq ($(OS), FreeBSD)
 		src/yannet/os/network/platform/bsd/KernelEventMechanism.cpp
 	INCLUDES := $(INCLUDES) -I/usr/local/include
 	LIBS_LDFLAGS := -L/usr/local/lib -lssl -lcrypto -pthread
+	MAIN_LDFLAGS := -pthread
 else ifeq ($(OS), NetBSD)
 	# NetBSD
 	SRCS_PLATFORM := $(SRCS_PLATFORM) \
@@ -186,13 +186,13 @@ $(MAINS):$(BIN)/%:$(SRC)/%-main.cpp $(LIBS)
 	@mkdir -p $(dir $@);
 	@scripts/windows-mingw-create-executable-rc.sh "$<" $@.rc
 	@windres $@.rc -o coff -o $@.rc.o
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $@.rc.o $< -L$(LIB_DIR) -l$(LDFLAG_LIB) $(MAIN_LDFLAGS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $@.rc.o $< -L$(LIB_DIR) $(MAIN_LDFLAGS)
 	@rm $@.rc
 	@rm $@.rc.o
 else
 $(MAINS):$(BIN)/%:$(SRC)/%-main.cpp $(LIBS)
 	@mkdir -p $(dir $@);
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $< -L$(LIB_DIR) -l$(LDFLAG_LIB) $(MAIN_LDFLAGS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $< -L$(LIB_DIR) $(MAIN_LDFLAGS)
 endif
 
 mains: $(MAINS)
