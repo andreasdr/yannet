@@ -21,6 +21,7 @@ endif
 LIB := lib$(NAME)$(LIB_EXT)
 LIBS_LDFLAGS =
 MAIN_LDFLAGS =
+LDFLAG_LIB := $(NAME)
 
 #
 SRCS_PLATFORM =
@@ -186,13 +187,13 @@ $(MAINS):$(BIN)/%:$(SRC)/%-main.cpp $(LIBS)
 	@mkdir -p $(dir $@);
 	@scripts/windows-mingw-create-executable-rc.sh "$<" $@.rc
 	@windres $@.rc -o coff -o $@.rc.o
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $@.rc.o $< -L$(LIB_DIR) $(MAIN_LDFLAGS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $@.rc.o $< -L$(LIB_DIR) -l$(LDFLAG_LIB) $(MAIN_LDFLAGS)
 	@rm $@.rc
 	@rm $@.rc.o
 else
 $(MAINS):$(BIN)/%:$(SRC)/%-main.cpp $(LIBS)
 	@mkdir -p $(dir $@);
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $< -L$(LIB_DIR) $(MAIN_LDFLAGS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $< -L$(LIB_DIR) -l$(LDFLAG_LIB) $(MAIN_LDFLAGS)
 endif
 
 mains: $(MAINS)
