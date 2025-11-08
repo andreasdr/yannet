@@ -69,4 +69,4 @@ Yannet is developed as part of our [TDME2 3D Engine](https://github.com/andreasd
 - Interested in collaboration? Then drop me a line via mail or use the issues section on [yannet@github](https://github.com/andreasdr/yannet/issues)
 
 # 6. Donation 
-- I have to pay my bills, beer and stuff, so if you have any use for this open source project, like educational, productive or fun, ..., consider a donation here [PayPal](https://www.paypal.me/andreasdrewke), here [GitHub Sponsors](https://github.com/sponsors/andreasdr) or via [Amazon Wishlist](https://www.amazon.de/hz/wishlist/ls/250IBUL4JSZVR?ref_=wl_share)
+- I have to pay my bills, beer and stuff, so if you have any use for this open source project, like educational, productive or fun, ..., consider a donation here [PayPal - currently disfunctional - was https://www.paypal.me/andreasdrewke], here [GitHub Sponsors](https://github.com/sponsors/andreasdr) or via [Amazon Wishlist](https://www.amazon.de/hz/wishlist/ls/250IBUL4JSZVR?ref_=wl_share)
